@@ -1,0 +1,7 @@
+- js module merupakan fitur dari js dimana kita dapat menggunakan kode js secar berulang ulang
+- dalam js module ini dapat dilakukan export dan import namun untuk import dapat dilakukan secar selektif
+- kita dapat melakukan export dengan secara langsung tanpa menambahkan kata kunci export pada setiapvariabel export{...}
+- kita dapat melakukan alias dengan kata kunci "as" untuk menghindari variabel berganda, alias ini direkomendasikan ketika melakukan import
+- dengan mneggunakan module object maka dapat dilakukan import sekaligus dari beberapa module
+- kita dapat menggunakan aggreagate dari modul menggunakan 1 file yang berisi bebrapa export sehingga melakukan import berkali kali
+- untuk melakukan import dapt dialkuakn ketika butuh saja yaitu dengan dynamic module loading agar menghemat bandtwith

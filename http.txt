@@ -1,0 +1,61 @@
+- htttp merupakan protokol untuk mengirimkan hypermedia doc , spt html css js
+- client kettika meminta data ke server meminta dalam bentuk http request dan dibalas dengan http response
+- http yang digunakan umumnya berupa http 1.1 atau 2, perbedaan dari kedua jenis http tersebut adalah efisiensi pada http 2, namun 
+apabila web browser belum mendukung http 2 maka akan dilakukan konversi ke http 1
+- https merupakan bentuk aman dari http karena dilakukan enkripsi terlebih dahulu kedalam http, sehingga tidak akan diambil pihak ketiga request dan responsenya
+- istilah yang digunakan dalam http
+-- web browser = aplikasi yang digunakan untuk mengakses wesb dengan protokol http
+-- TCP(Transmission COntroll protocol)= salah satu protokol dalam jaringan komputer
+-- IP(internet protocol) = identitas komputer didalam jaringan
+-- URL(uniform resource locator) = merupakan alama resource di web
+-- DNS (Domain name server) = tempat yang berisi data katalog pemetaan nama domain di URL menuju lokasi IP komputer(alamat lokasi server dari facebook, daat kita buka domain sebenarnya ditanyakan ke DNS mengani detail IP)
+-- web server =  merupakan apliasi yang berjalan di jaringan internet yang bertugas sebagai server
+ web server berisi informasi dan data yang biasa diakses oleh client, berisi req dan response dari client
+- alur kerja http:
+    *server merupakan sebuah komputer, dimana berisi semua informasi yang disimpan pada comp tersebut. komputer server biasanya menjalankan aplikasi web server agar bisa menerima protocol http
+    * client merupakan komputer yang bertugas untuk mengirim request ke komputer server melalui webbrowser, dimaa client dan server harus terkoneksi pada satu jaringan
+    * clinet mengirim request meallui http request, yang berisi informasi, kemudian server akan memproses requst yang diminta oleh client tersebut
+    * response meupakan informasi balasan dari http request
+-  network tool digunakan untuk melihat request dan response untuk suatu web inspect->network
+- HTTP method:
+    get: digunakan untuk request data yang ditujukan untuk meminta data bukan untuk mengirim data
+    head: sama seperti get namun tanpa digunakan response body
+    post: digunakan untuk mengirim data ke server, biasa digunakan untuk mengirim data baru, biasa nya terdiri dari body
+    put: mengganti semua data yang terdapat diserver dengan data baru yang dikirim di request
+    delete: menghapus data
+    patch: mengubah sebagian data
+    options: mendeskripsikan opsi komunikasi uang tersedia 
+    trace: untuk melakukan debugging
+- URL : alamat dari sebuah resource pada suatu web dan wajib digunakan untuk menuju informasi yang akan dituju
+    URL dipecah menjadi sua buah yaitu domain dan context path
+- bagian bagian dari URL:
+    schema: mengindikasikan protocol yang digunakan oleh client ->http/https
+    authority : yang terdiri dari domain(ytm.com) dan nama port yang dipisahkan dengan titik dahulu(80 http,443 https), nama domain nanti akan ditanyakan ke DNS(pemetaan domain tehadap ip) untuk mendapat IP
+    path: merupakan informasi menuju detail resource yang dituju
+    parameters: dipisahkan dengan ? dari autority/path -> merupakan informasi tambahana yang berisi key=value , bisa juga ditambahakan dengan &
+    achor: representasi bookmark
+- HTTP Header: informasi yang biasa terkirim pada request maupun response, yang berisi
+    Host : otoritas pada URL, wajib berisi domain
+    Content-Type : Tipe data
+    User-agent : Informasi user agent(browser dan sistem operasi)
+    accept : type data yang diterima oleh client
+    authorization : credential untuk autentikasi
+    https://en.wikipedia.org/wiki/List_of_HTTP_header_fields
+-HTTP Status : merupakan status pengiriman rquest yang dikirimkan oleh client, http status terdiridari angka
+    100-199:informational tresponse
+    200-299:succesfull response
+    300-399: redirect
+    400-499:client error
+    500-599:client error
+    https://en.wikipedia.org/wiki/List_of_HTTP_status_codes
+-HTTP body : merupakan data yang bisa dikirim oleh HTTP
+-HTTP cookie : merupakan informasi yang diberikan oleh server dan client secar otomatis akan menyimpan data tersebut pad wesb browser
+dapat digunakan pada kegiatan login dan logout
+    cookie ditempatkan pada header dan nama header nya set-Cookie
+    cara kerja cookie -> jika sudah login maka diset cookie nya kedalam web browser, sehingga disetiap requestnya akan dilakukan pengiriman cookie
+    cookie dapat di set waktu maksimum dalam valid, atau domainnya cek
+    https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie
+-HTTP caching -> menyimpan data di client sampau batas waktu yang sudah ditentukan, sehingga tidak perlu melakukan rquest berulang ulang
+untuk mengatur chace dapat dilakukan dengan https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control
+
+ 

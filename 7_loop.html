@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const person = {
+        firstName: "hafid",
+        secondName: "Rosyadi",
+        pangkat: "ganteng",
+      };
+      // forin digunakan untuk melakukan iterasi pada object
+      for (const property in person) {
+        document.writeln(`<p>${property} : ${person[property]}</p>`);
+      }
+      // forof digunakan untuk melakukan iterasi pada array
+      const akun = ["hafid", "rosyadi", "ganteng seru"];
+      for (const i of akun) {
+        document.writeln(`<p>${i}</p>`);
+      }
+      //   operator with untuk memperkecil scope dari suatu tipe data
+      const arr = {
+        namaA: "Muhammad",
+        namaB: "Hafidh",
+        namaC: "rosyadi",
+      };
+      with (arr) {
+        document.writeln(`<p>${namaA}</p>`);
+        document.writeln(`<p>${namaB}</p>`);
+        document.writeln(`<p>${namaC}</p>`);
+      }
+    </script>
+  </body>
+</html>

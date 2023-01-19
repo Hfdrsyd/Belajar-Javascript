@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //   untuk menambah kan instance dapat dilakukan dengan menambah kan prototype
+      function Person(firstName, lastName) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.sayHello = function (name) {
+          console.info(`hello ${name}, My name is ${this.firstName}`);
+        };
+      }
+      //   ini merupakan inheritence
+      Person.prototype.Bye = function () {
+        console.info(`Good bye`);
+      };
+      const eko = new Person("hafid", "rosyadi");
+    //   prototype inheritence mengecek ke instance terlebih dahulu kemudian mengecek ke proto sehingga
+    // apabila ditambahkan instance maka akan dibaca dari instance
+      console.info(eko);
+    </script>
+  </body>
+</html>

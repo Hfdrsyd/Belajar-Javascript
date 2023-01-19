@@ -1,0 +1,27 @@
+- js bisa dijalankan di html melalui <script> secar langsung maupun melalui src pada script
+- tipe data memiliki beberapa jenis selain number yaitu binary dan hexadesimal
+- variable digunakan untuk melakukan deklarasi untuk penggunaan banyak, namun ini diganti kan dengan let
+- js juga bisa di print pada console dengan beberapa jenis seperti debug info warn error
+- untuk pengeprintan seperti bahasa C dapat di gunakan backtik ``` dan ${} untuk variabelnya didalam 
+variabel juga bisa dilakukan operasi mat
+- array pada js merupakan dynamic sehinga dapat diisi dengan tipe data apapun
+operasi pada aray push, length , indexing, delete indexing
+-tipe data object merupakan array yang digunakan dengan index string atau bila dalam C yaitu struct
+- pemanggilan dapat dilakukan dengan backtik/string template, dengan prosedur pemanggilan seperti struct
+namun apabila lebih dari satu suku kata maka dapat digunakan string, dan penggunaannya mirip dengan indexing array
+- undefine adalah sebuah variabel yang belum di deklarasikan
+- untuk mengidentifikasikan jenis tipe data dapat digunakan typeof
+- untuk mengecek apakah property dari object ada atau tidak dapat digunakan "in" return valuenya bool 
+(hanya mengecek ada atau tidak)
+- || akan mengambil yang truty pertama kali dan apabila tidak ada yang truty maka akan mengambil falsy yang terakhir
+- && akan mengambil falsy pertama kali dan apabila tidak ada yang falsi maka akan mengambil yang terakhir
+- label digunakan untuk membantu break dan continue pada perulangan index sebelumnya
+- parameter dalam js tidak wajib dimasukkan valuenya/ bersifat opsional, dimana juga dapat diisi default value dari parameter
+- rest parameter merupakan fitur dimana kita dapat mengirim data sebanyak banyaknya, tanpa dilakukan konversi terlebih dahulu
+func(...data)
+- kita dapat melakukan pemanggilan function kedalam variable js
+- kita juga dapat melakukan pengisian function didalam function, dengan callback parameter
+- dalam js dapat dialkukan function tanpa nama atau bisa disebut anonymus func dengan format function (parameter){}, namun harus dialkukan pada variable
+- data generator bersifat lazy yaitu ketik data ditarik baru akan melakukan operasi
+- dalam js kita dapat membuat function menggunakan function
+- function juga dapat dimasukkan kedalam object-> object method

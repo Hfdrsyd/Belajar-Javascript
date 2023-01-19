@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      class mathUtil {
+        static sum(...numbers) {
+          if (numbers.length === 0) {
+            // throw untuk error dan akan menghnetikan program
+            const error = new Error(
+              "Total Parameter harus lebih dari nol"
+            );
+            throw error;
+          }
+          let total = 0;
+          for (const num of numbers) {
+            total += num;
+          }
+          return total;
+        }
+      }
+      try {
+        console.info(mathUtil.sum());
+        console.info("EKo");
+      } catch (error) {
+        console.info(`Terjadi Error : ${error.message}`);
+      } finally {
+        //keyword finally yang akan dieksekusi setelah try catch
+        console.info("kode program selesai");
+      }
+    </script>
+  </body>
+</html>

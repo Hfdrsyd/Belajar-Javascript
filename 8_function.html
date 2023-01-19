@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // function generator merupakan function yang berisi data mirip seperti array namun hanya bisa diterasi
+        function* createName(){
+            yield "M"
+            yield "H"
+            yield "R"
+        }
+        const name = createName();
+        for (const i of name) {
+            console.info(i);
+        }
+        // data generator bersifat lazy yaitu apabila data dari generator belum dipanggil maka data masih belum di proses
+
+        function* ganjil(value) {
+            for (let i = 0; i < value; i++) {
+                if (i%2==1) {
+                    yield i;
+                }
+            }
+        }
+        const num = ganjil(100);
+        // untuk melakukan pemanggilan generator dapat dilakukan dengan
+        console.info(num.next().value);
+        // for (const i of num) {
+        //     console.info(i);
+        // }
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // static merupakan tipe data yang digunakan untuk menyimpan field/ method 
+        // di instance object
+        class Configuration{
+            static name = "Belajar java";
+            static duration= 50;
+            // static method
+            static sum(...numbers){
+                let total =0;
+                for (const num of numbers) {
+                    total+=num;
+                }
+                return total;
+            }
+        }
+        const config = new Configuration();
+        console.info(config);
+        // untuk mengakses static maka dapat digunakan dengan 
+        console.info(Configuration.name);
+        // static seperti variabel global
+        console.info(Configuration.sum(4,6,7));
+    </script>
+</body>
+</html>
